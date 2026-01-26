@@ -1,0 +1,568 @@
+<configuration>
+  <modules>
+    <!-- Bake specific dependencies -->
+    <module name="mercurial">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="hg"/>
+        <attribute name="name_apt-get" value="mercurial"/>
+        <attribute name="name_yum" value="mercurial"/>
+        <attribute name="more_information" value="Didn't find:   Mercurial package; please install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="make">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="make"/>
+        <attribute name="name_apt-get" value="make"/>
+        <attribute name="name_yum" value="rar"/>
+        <attribute name="more_information" value="Didn't find:   make - Utility for Directing compilation.; please install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="patch">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="patch"/>
+        <attribute name="name_apt-get" value="patch"/>
+        <attribute name="name_yum" value="patch"/>
+        <attribute name="more_information" value="Didn't find:   patch - Apply a diff file to an original; please install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="tar">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="tar"/>
+        <attribute name="name_apt-get" value="tar"/>
+        <attribute name="name_yum" value="tar"/>
+        <attribute name="more_information" value="Didn't find:   tar - GNU version of the tar archiving utility; please install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="git">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="git"/>
+        <attribute name="name_apt-get" value="git"/>
+        <attribute name="name_yum" value="git"/>
+        <attribute name="more_information" value="Didn't find:   git - fast, scalable, distributed revision control system; please install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="cmake">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="cmake"/>
+        <attribute name="name_apt-get" value="cmake"/>
+        <attribute name="name_yum" value="cmake"/>
+        <attribute name="more_information" value="Didn't find:   git - fast, scalable, distributed revision control system; please install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="automake">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="autoconf"/>
+        <attribute name="name_apt-get" value="autoconf automake"/>
+        <attribute name="name_yum" value="autoconf automake"/>
+        <attribute name="more_information" value="Didn't find:   autoconf and automake - automatic configure and Makefile script builders; please install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <!-- For the documentation -->
+    <module name="python-sphinx">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="sphinx-build"/>
+        <attribute name="name_apt-get" value="python-sphinx"/>
+        <attribute name="name_yum" value="python-sphinx"/>
+        <attribute name="more_information" value="Didn't find:   python-sphinx - documentation generator for Python projects; please install it, if you think you will gennerate the documentation."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="python-pygments">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="pygmentize"/>
+        <attribute name="name_apt-get" value="python-pygments"/>
+        <attribute name="name_yum" value="python-pygments"/>
+        <attribute name="more_information" value="Didn't find:   python-pygments - syntax highlighting package written in Python; please install it, if you think you will gennerate the documentation."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <!-- System dependencies -->
+    <module name="g++">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="g\+\+"/>
+        <attribute name="more_information" value="g++ is not installed, try to install it or talk to your system administrator"/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="qt">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="qobject.h and qapplication.h and (qmake or qmake-qt5)"/>
+        <attribute name="name_yum" value="qt5-devel"/>
+        <attribute name="name_apt-get" value="qt5-dev-tools libqt5-dev"/>
+        <attribute name="more_information" value="Didn't find: Qt version 5; install it from packages, or download from https://info.qt.io/download-qt-for-application-development"/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+    
+    <module name="python3-dev">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="python3-config"/>
+        <attribute name="name_apt-get" value="python3-dev"/>
+        <attribute name="name_yum" value="python3-devel"/>
+        <attribute name="more_information" value="The python3-dev is not installed, try to install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="setuptools">
+      <source type="system_dependency">
+        <attribute name="import_test" value="setuptools"/>
+        <attribute name="name_apt-get" value="python-setuptools"/>
+        <attribute name="name_yum" value="python-setuptools"/>
+        <attribute name="name_port" value="py-setuptools"/>
+        <attribute name="more_information" value="The python-setuptools package is not installed, try to install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="pygraphviz">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="(_gv.so or _graphviz.so or _graphviz.x86_64-linux-gnu.so or _graphviz.cpython-35m-x86_64-linux-gnu.so or _graphviz.cpython-38-x86_64-linux-gnu.so or _graphviz.cpython-39-x86_64-linux-gnu.so or _graphviz.cpython-310-x86_64-linux-gnu.so)"/>
+        <attribute name="name_apt-get" value="python3-pygraphviz"/>
+        <attribute name="name_yum" value="python3-pygraphviz"/>
+        <attribute name="more_information" value="The pygraphviz is not installed, try to install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+    
+    <module name="pygobject">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="_gi.x86_64-linux-gnu.so or _gi.cpython-35m-x86_64-linux-gnu.so or _gi.cpython-38-x86_64-linux-gnu.so or _gi.cpython-39-x86_64-linux-gnu.so or _gi.cpython-310-x86_64-linux-gnu.so or _gi.so"/>
+        <attribute name="name_apt-get" value="python3-gi"/>
+        <attribute name="name_yum" value="pygobject3-devel"/>
+        <attribute name="more_information" value="Python gobject components missing from system."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="gi-cairo">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="_gi_cairo.cpython-35m-x86_64-linux-gnu.so or _gi_cairo.x86_64-linux-gnu.so or _gi_cairo.cpython-38-x86_64-linux-gnu.so or _gi_cairo.cpython-39-x86_64-linux-gnu.so or _gi_cairo.cpython-310-x86_64-linux-gnu.so or _gi_cairo.so"/>
+        <attribute name="name_apt-get" value="python3-gi-cairo"/>
+        <attribute name="name_yum" value="pygobject3-devel"/>
+        <attribute name="more_information" value="Python gobject components missing from system."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="gir-bindings">
+      <source type="system_dependency">
+        <attribute name="file_test" value="/usr/lib/x86_64-linux-gnu/girepository-1.0/Gtk-3.0.typelib or /usr/lib64/girepository-1.0/Gtk-3.0.typelib"/>
+        <attribute name="name_apt-get" value="gir1.2-gtk-3.0"/>
+        <attribute name="name_yum" value="gtk3"/>
+        <attribute name="more_information" value="GTK+3 gir bindings missing from system."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="pygoocanvas">
+      <source type="system_dependency">
+        <attribute name="file_test" value="/usr/lib/x86_64-linux-gnu/girepository-1.0/GooCanvas-2.0.typelib or /usr/lib64/girepository-1.0/GooCanvas-2.0.typelib"/>
+        <attribute name="name_apt-get" value="gir1.2-goocanvas-2.0"/>
+        <attribute name="name_yum" value="pygoocanvas"/>
+        <attribute name="name_port" value="pygoocanvas"/>
+        <attribute name="more_information" value="The pygoocanvas is not installed, try to install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="gawk">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="gawk"/>
+        <attribute name="name_apt-get" value="gawk"/>
+        <attribute name="name_yum" value="gawk"/>
+        <attribute name="more_information" value="The gawk is not installed, try to install them (gawk)"/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="sqlite">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="sqlite"/>
+        <attribute name="name_apt-get" value="sqlite"/>
+        <attribute name="name_yum" value="sqlite"/>
+        <attribute name="more_information" value="The sqlite is not installed, try to install them (sqlite)"/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="sqlite3">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="sqlite3"/>
+        <attribute name="name_apt-get" value="sqlite3"/>
+        <attribute name="name_yum" value="sqlite3"/>
+        <attribute name="more_information" value="The sqlite3 is not installed, try to install them (sqlite3)"/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+    
+    <module name="bc">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="bc"/>
+        <attribute name="name_yum" value="bc"/>
+        <attribute name="name_yast" value="bc"/>
+        <attribute name="name_apt-get" value="bc"/>
+        <attribute name="more_information" value="Didn't find: the bc calculator language, try to install it!"/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="libdb-dev">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="db_185.h"/>
+        <attribute name="name_apt-get" value="libdb-dev"/>
+        <attribute name="name_yum" value="db4-devel"/>
+        <attribute name="more_information" value="Didn't find:   libdb-dev package; please install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+    
+    <module name="bison">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="bison"/>
+        <attribute name="name_apt-get" value="bison"/>
+        <attribute name="name_yum" value="bison"/>
+        <attribute name="more_information" value="The bison tool is not installed, try to install them (bison)"/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+    
+    <module name="flex">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="flex"/>
+        <attribute name="name_apt-get" value="flex"/>
+        <attribute name="name_yum" value="flex"/>
+        <attribute name="more_information" value="The flex tool is not installed, try to install them (flex)"/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <module name="libssl-dev">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="md5.h"/>
+        <attribute name="name_apt-get" value="libssl-dev"/>
+        <attribute name="name_yum" value="openssl-devel"/>
+        <attribute name="more_information" value="Didn't find:   libssl-dev package; please install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+ 
+    <module name="lksctp-dev">
+      <source type="system_dependency">
+        <attribute name="dependency_test" value="sctp.h"/>
+        <attribute name="name_apt-get" value="lksctp-dev"/>
+        <attribute name="name_yum" value="lksctp-tools-devel"/>
+        <attribute name="more_information" value="Didn't find:   lksctp-dev package; please install it."/>
+      </source>
+      <build type="none">
+      </build>
+    </module>
+
+    <!-- Manually built modules -->
+    <module name="netanim-3.108">
+      <source type="git">
+        <attribute name="url" value="https://gitlab.com/nsnam/netanim.git"/>
+        <attribute name="revision" value="netanim-3.108"/>
+      </source>
+      <build type="make">
+        <attribute name="pre_installation" value="cd $SRCDIR;qmake NetAnim.pro or cd $SRCDIR;qmake-qt5 NetAnim.pro or cd $SRCDIR;qmake-qt4 NetAnim.pro"/>
+      </build>
+      <depends_on name="qt" optional="False"/>
+      <depends_on name="g++" optional="False"/>
+    </module>
+
+    <module name="pybindgen-0.22.0">
+      <source type="git">
+        <attribute name="url" value="https://github.com/gjcarneiro/pybindgen.git"/>
+        <attribute name="module_directory" value="pybindgen"/>
+        <attribute name="revision" value="0.22.0"/>
+      </source>
+      <build type="python" objdir="objdir">
+        <attribute name="patch" value="$SRCDIR/../ns-3-dce/utils/pybindgen-setuptools-fix.patch"/>
+        <attribute name="pre_installation" value="mkdir -p $INSTALLDIR/lib"/>
+      </build>
+      <depends_on name="python3-dev" optional="True"/>
+      <depends_on name="setuptools" optional="False"/>
+    </module>
+
+    <module name="pyviz-gtk3-prerequisites">
+      <source type="none">
+      </source>
+      <depends_on name="python3-dev" optional="True"/>
+      <depends_on name="pygraphviz" optional="True"/>
+      <depends_on name="pygobject" optional="True"/>
+      <depends_on name="gi-cairo" optional="True"/>
+      <depends_on name="gir-bindings" optional="True"/>
+      <depends_on name="pygoocanvas" optional="True"/>
+      <build type="none">
+      </build>
+    </module>
+    
+    <module name="ns-3.35" type="ns">
+      <source type="git">
+        <attribute name="url" value="https://gitlab.com/nsnam/ns-3-dev.git"/>
+        <attribute name="module_directory" value="ns-3.35"/>
+        <attribute name="branch" value="master"/>
+        <attribute name="revision" value="ns-3.35"/>
+      </source>
+      <depends_on name="netanim-3.108" optional="True"/>
+      <depends_on name="pybindgen-0.22.0" optional="True"/>
+      <depends_on name="pyviz-gtk3-prerequisites" optional="True"/>
+      <build type="waf">
+        <attribute name="patch" value="$SRCDIR/../ns-3-dce/utils/ns-3.35-wifi-model-he-fix.patch"/>
+        <attribute name="configure_arguments" value="configure --prefix=$INSTALLDIR --enable-examples --enable-tests"/>
+      </build>
+    </module>
+
+    <module name="5g-lena-1.2.y-ns3.35">
+      <source type="git">
+        <attribute name="url" value="https://gitlab.com/cttc-lena/nr.git"/>
+        <attribute name="module_directory" value="ns-3.35/contrib/nr"/>
+        <attribute name="branch" value="5g-lena-v1.2.y"/>
+      </source>
+      <depends_on name="ns-3.35" optional="False"/>
+      <depends_on name="sqlite" optional="False"/>
+      <depends_on name="sqlite3" optional="False"/>
+      <build type="none">
+      </build>
+    </module>
+    
+    <module name="linux-4.4-mptcp">
+      <source type="git">
+        <attribute name="url" value="https://github.com/multipath-tcp/mptcp.git"/>
+        <attribute name="module_directory" value="linux-mptcp"/>
+        <attribute name="branch" value="mptcp_v0.92" />
+      </source>
+      <depends_on name="glibc-2.31" optional="False" />
+      <build type="make" objdir="yes">
+        <attribute name="build_arguments" value="headers_install INSTALL_HDR_PATH=$INSTALLDIR/glibc/usr" />
+        <attribute name="no_installation" value="True"/>
+      </build>
+    </module>
+    
+    <module name="libaspect">
+      <source type="mercurial">
+        <attribute name="url" value="https://code.nsnam.org/thehajime/libaspect"/>
+      </source>
+      <build type="make">
+        <attribute name="install_arguments" value="PREFIX=$INSTALLDIR"/>
+      </build>
+      <depends_on name="mercurial" optional="False"/>
+    </module>
+
+    <module name="iperf">
+      <source type="archive">
+        <attribute name="url" value="http://sourceforge.net/projects/iperf/files/iperf-2.0.5.tar.gz"/>
+        <attribute name="extract_directory" value="iperf-2.0.5"/>
+      </source>
+      <build type="make" objdir="objdir">
+        <attribute name="pre_installation" value="cd $SRCDIR;./configure --prefix=$INSTALLDIR"/>
+        <attribute name="patch" value="$SRCDIR/../ns-3-dce/utils/iperf_4_dce.patch"/>
+        <attribute name="build_arguments" value="CFLAGS=-fPIC CFLAGS+=-U_FORTIFY_SOURCE CXXFLAGS=-fPIC CXXFLAGS+=-U_FORTIFY_SOURCE LDFLAGS=-pie LDFLAGS+=-rdynamic"/>
+      </build>
+    </module>
+
+    <module name="wget">
+      <source type="archive">
+        <attribute name="url" value="http://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz"/>
+        <attribute name="extract_directory" value="wget-1.15"/>
+      </source>
+      <build type="make" objdir="objdir">
+        <attribute name="pre_installation" value="cd $SRCDIR; CFLAGS='-fPIC -g' LDFLAGS='-pie -rdynamic' ./configure --disable-opie --disable-digest --disable-ntlm --disable-largefile --disable-threads --disable-nls --disable-rpath --disable-iri --without-ssl --without-zlib --without-libiconv-prefix --without-libintl-prefix --without-libpth-prefix --without-included-regex --prefix=$INSTALLDIR"/>
+        <attribute name="post_installation" value="mv $INSTALLDIR/bin/wget $INSTALLDIR/bin_dce"/> 
+      </build>
+    </module>
+
+    <module name="thttpd">
+      <source type="archive">
+        <attribute name="url" value="http://www.acme.com/software/thttpd/thttpd-2.25b.tar.gz"/>
+        <attribute name="extract_directory" value="thttpd-2.25b"/>
+      </source>
+      <build type="make" objdir="objdir">/"
+        <attribute name="pre_installation" value="cd $SRCDIR; sed &quot;s/rm conftest.c/rm -f conftests.c/&quot; configure >a; mv a configure; chmod 755 configure;./configure --prefix=$INSTALLDIR"/>
+        <attribute name="patch" value="$SRCDIR/../ns-3-dce/utils/dce-thttpd.patch"/>
+        <attribute name="install_arguments" value="-n" />
+        <attribute name="build_arguments" value="thttpd"/>
+        <attribute name="post_installation" value="cd $SRCDIR; mkdir $INSTALLDIR/bin_dce; /bin/cp -f thttpd  $INSTALLDIR/bin_dce"/>
+      </build>
+    </module>
+
+    <module name="bash">
+      <source type="archive">
+        <attribute name="url" value="http://ftp.gnu.org/gnu/bash/bash-4.1.tar.gz"/>
+        <attribute name="extract_directory" value="bash-4.1"/>
+      </source>
+      <build type="make" objdir="objdir">
+        <attribute name="pre_installation" value="cd $SRCDIR; CFLAGS='-g -fPIC' LDFLAGS='-pie -rdynamic' CFLAGS_FOR_BUILD='-g -fPIC' ./configure --without-bash-malloc --prefix=$INSTALLDIR"/>
+      </build>
+    </module>
+
+    <module name="net-next-nuse-mptcp-0.92">
+      <source type="git">
+        <attribute name="url" value="https://github.com/wonderfulnx/net-next-nuse-mptcp.git"/>
+        <attribute name="module_directory" value="net-next-nuse-mptcp-0.92"/>
+        <attribute name="branch" value="net-next-nuse-mptcp_v0.92"/>
+      </source>
+      <depends_on name="bc" optional="False"/>
+      <build type="make">
+        <attribute name="supported_os" value="linux;linux2"/>
+        <attribute name="configure_arguments" value="defconfig ARCH=lib"/>
+        <attribute name="build_arguments" value="library ARCH=lib"/>
+        <attribute name="no_installation" value="True"/>
+        <attribute name="post_installation" value="mkdir -p $INSTALLDIR/bin_dce; cd $INSTALLDIR/bin_dce; cp $SRCDIR/arch/lib/tools/libsim-linux-4.4.110.so ./; ln -s -f libsim-linux-4.4.110.so liblinux.so"/>
+      </build>
+    </module>
+
+    <module name="iproute-mptcp-0.92">
+      <source type="git">
+        <attribute name="url" value="https://github.com/multipath-tcp/iproute-mptcp.git"/>
+        <attribute name="branch" value="mptcp_v0.92"/>
+        <attribute name="module_directory" value="iproute-mptcp-0.92"/>
+      </source>
+      <depends_on name="libdb-dev" optional="False"/>
+      <depends_on name="bison" optional="False"/>
+      <depends_on name="flex" optional="False"/>
+      <depends_on name="libssl-dev" optional="False"/>
+      <build type="make" objdir="objdir">
+        <attribute name="supported_os" value="linux;linux2"/>
+        <attribute name="pre_installation" value="$SRCDIR/configure"/>
+        <attribute name="LDFLAGS" value="-pie"/>
+        <attribute name="ignore_predefined_flags" value="True"/>
+        <attribute name="install_arguments" value="DESTDIR=$INSTALLDIR" />
+        <attribute name="build_arguments" value="DEFINES+=-I$SRCDIR/../../../../../../arch/lib/include/ DEFINES+=-I$SRCDIR/../../../../../../arch/lib/include/generated/ DEFINES+=-I$SRCDIR/../../../../../../include/uapi/ DEFINES+=-I$SRCDIR/../../../../../../include CCOPTS+=-fpic CCOPTS+=-D_GNU_SOURCE CCOPTS+=-O0 CCOPTS+=-U_FORTIFY_SOURCE CCOPTS+=-g CCOPTS+=-DUINT16_MAX=65535 LDFLAGS=-pie LDFLAGS+=-rdynamic"/>
+      </build>
+    </module>
+
+    <module name="glibc-2.31">
+      <source type="git">
+        <attribute name="url" value="https://sourceware.org/git/glibc.git" />
+        <attribute name="revision" value="release/2.31/master" />
+        <attribute name="module_directory" value="glibc" />
+      </source>
+      <depends_on name="gawk" optional="False"/>
+      <build type="inline" classname="GlibcModuleBuild">
+        <attribute name="patch" value="$SRCDIR/../ns-3-dce/utils/glibc-2.31-disable-security-checks.patch"/>
+        <attribute name="pre_installation" value="mkdir -p $INSTALLDIR/glibc-build;cd $INSTALLDIR/glibc-build;$SRCDIR/configure --prefix=/usr --disable-werror" />        
+        <code>class GlibcModuleBuild(InlineModuleBuild):
+    def __init__(self):
+        InlineModuleBuild.__init__(self)
+    def build(self, env, jobs):
+           build_dir = env.installdir + '/glibc-build'
+           install_dir = env.installdir + '/glibc'
+           dest_dir = 'DESTDIR=' + install_dir
+           env.run(['mkdir', '-p', install_dir], directory=env.srcdir)
+           env.run(['make'], directory=build_dir)
+           env.run(['make', 'install', dest_dir], directory=build_dir)
+    def clean(self, env):
+           build_dir = env.installdir + '/glibc-build'
+           env.run(['make', 'clean'], directory=build_dir)
+    def check_version(self, env):
+           return True</code>
+      </build>
+     </module>
+
+    <module name="dce-meta-mptcp-kernel4.4">
+      <source type="git">
+	    <attribute name="url" value="https://github.com/wonderfulnx/ns-3-dce-mptcp.git"/>        
+        <attribute name="module_directory" value="ns-3-dce"/>
+        <attribute name="branch" value="v1.12-mptcp"/>
+      </source>
+      <depends_on name="5g-lena-1.2.y-ns3.35" optional="False"/>
+      <depends_on name="glibc-2.31" optional="False"/>
+      <depends_on name="linux-4.4-mptcp" optional="False"/>
+      <depends_on name="libaspect" optional="True"/>
+      <depends_on name="iperf" optional="True"/>
+      <depends_on name="wget" optional="True"/>
+      <depends_on name="thttpd" optional="True"/>
+      <depends_on name="bash" optional="True"/>
+      <build type="none">
+      </build>
+    </module>
+    
+    <module name="dce-linux-mptcp-kernel4.4">
+      <source type="git">
+        <attribute name="url" value="https://github.com/wonderfulnx/ns-3-dce-mptcp.git"/>        
+        <attribute name="module_directory" value="ns-3-dce"/>
+        <attribute name="branch" value="v1.12-mptcp"/>
+      </source>
+      <depends_on name="dce-meta-mptcp-kernel4.4" optional="False"/>
+      <depends_on name="net-next-nuse-mptcp-0.92" optional="False"/>
+      <depends_on name="iproute-mptcp-0.92" optional="False"/>
+      <depends_on name="lksctp-dev" optional="True"/>
+      <build type="waf" objdir="objdir" sourcedir="ns-3-dce">
+        <attribute name="supported_os" value="linux;linux2"/>
+        <attribute name="configure_arguments" value="configure --prefix=$INSTALLDIR --with-ns3=$INSTALLDIR --with-glibc=$INSTALLDIR/glibc --with-libaspect=$INSTALLDIR --enable-kernel-stack=$SRCDIR/../net-next-nuse-mptcp-0.92/arch"/>
+      </build>
+    </module>
+  </modules>
+
+  <predefined name="set-bake-env">
+    <enable name="make"/>
+    <enable name="patch"/>
+    <enable name="tar"/>
+    <enable name="git"/>
+    <enable name="cmake"/>
+    <enable name="automake"/>
+    <enable name="python-sphinx"/>
+    <enable name="python-pygments"/>
+  </predefined>
+
+  <predefined name="dbg">
+    <append name="CFLAGS" value="-g"/>
+    <append name="CXXFLAGS" value="-g"/>
+    <configuration objdir="dbg"/>
+    <configuration installdir="build_dbg"/>
+  </predefined>
+
+  <predefined name="opt">
+    <configuration objdir="opt"/>
+    <configuration installdir="build_opt"/>
+    <!-- <append name="configure_arguments" value=" -d optimized"/> -->
+    <append name="CFLAGS" value="-O3"/>
+    <append name="CXXFLAGS" value="-O3"/>
+  </predefined>
+
+</configuration>
