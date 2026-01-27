@@ -231,7 +231,7 @@ Another example is a LTE and Wi-Fi MPTCP:
 NS_LOG="DceManager=level_function|func|prefix_time" ./waf --run "dce-mptcp-lte-wifi --help"
 # Run these one by one to see the iperf result:
 rm -rf files-*; rm *.pcap
-NS_LOG="DceApplication=level_function|func|prefix_time" ./waf --run "dce-iperf-mptcp"
+NS_LOG="DceManager=level_function|func|prefix_time" ./waf --run "dce-mptcp-lte-wifi"
 #   check results using the `for` loop
 rm -rf files-*; rm *.pcap
 NS_LOG="DceManager=level_function|func|prefix_time" ./waf --run "dce-mptcp-lte-wifi --disLte=true --iperfyC=true"
