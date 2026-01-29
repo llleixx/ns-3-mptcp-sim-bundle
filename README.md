@@ -241,3 +241,16 @@ NS_LOG="DceManager=level_function|func|prefix_time" ./waf --run "dce-mptcp-lte-w
 ```
 
 The bandwidth of MPTCP should be close to the sum of WiFi-only and LTE-only.
+
+## Kernel 5.10 support
+
+As there has been some attempt to make dce support more modern Linux, i.e., kernel version 5.10 (https://ns-3-dce-linux-upgrade.github.io). I also add this extension to our back file. Theoretically, A good feature for kernel 5.10 is that MPTCP is merged into the main branch.
+
+You can try it out with
+```sh
+./bake.py -V configure -e dce-linux-kernel5.10
+```
+
+and then follow the same process as above.
+
+However, there seems to be issues not resolved in this framework according to the last part of [this report](https://docs.google.com/document/d/1o3xsukgDN9e4-q8n6KbLDX2c9fTxKIhRhimDsn4ivr8). As a result, we have one test (dce-cradle) failed and no bandwidth improvement when MPTCP is enabled. Therefore, using kernel 4.4 is still highly recommended.
